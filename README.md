@@ -8,7 +8,7 @@ Files Details:
 
 2) Spark_Basics_Architecture: Provides the basics to depth understanding of Big Data with Spark
 
-3) Practicals: Basic Practices of RDD and Dataframes using Jupyter notebook.
+3) Practicals: Basic Practices of RDD and Dataframes using Scala & Python.
 
 4) Spark Optimization: Some important Ideas for Spark Job optimization and tuning.
 
