@@ -1,6 +1,6 @@
-BigData Tutorial with Pyspark:
+BigData Tutorial with Scala-Spark & Pyspark:
 
-This Git-Hub Rository focuses on learning Big-Data Spark using Pyspark.
+This Git-Hub Rository focuses on learning Big-Data Spark using Scala & Python.
 
 Files Details:
 
