@@ -113,7 +113,12 @@ object Spark_DF {
     emp.filter($"JOB" === "CLERK" || $"JOB" === "ANALYST").show()
     //----------------------------------------------------------------------------------------------------------
 
-    //Important - UDF 
+    // # 15. List the emps who joined on 1-MAY-81,3-DEC-81,17-DEC-80,19-JAN-80 in asc order of seniority.
+    println("15. List the emps who joined on 1-MAY-81,3-DEC-81,17-DEC-80,19-JAN-80 in asc order of seniority.")
+    emp.filter($"HIREDATE".isin("1981-05-01 00:00:00","1981-12-03 00:00:00","1980-12-17 00:00:00","1980-01-19 00:00:00")).show()
+    //----------------------------------------------------------------------------------------------------------
+
+    //Important - UDF
     //If sal more than 1000 tell mgr else acc
 
     //Note: It will help to find the type
@@ -133,5 +138,27 @@ object Spark_DF {
     emp.withColumn("Designation",desi($"SAL")).show()
     //----------------------------------------------------------------------------------------------------------
 
+    //# 16. List the emp who are working for the Deptno 10 or20.
+    println("16. List the emp who are working for the Deptno 10 or20.")
+    emp.filter($"DEPTNO".isin(10,20)).show()
+    //-----------------------------------------------------------------------------------------------------------
+
+    //# 17. List the emps who are joined in the year 80.
+    print("17. List the emps who are joined in the year 80.")
+    emp.filter(year($"HIREDATE") === 1980).show()
+
+    //# 18. List the emps who are joined in the month of Aug 1980.
+    println("18. List the emps who are joined in the month of Aug 1980.")
+    emp.filter(year($"HIREDATE") === 1980 && month($"HIREDATE") === 12).show()
+
+    //IMPORTANT
+    // #19. List the emps Who Annual sal ranging from 22000 and 45000.
+    println("19. List the emps Who Annual sal ranging from 22000 and 45000.")
+    emp.select($"*",($"SAL"*12).alias("AnnSal")).filter($"AnnSal".between(22000, 45000)).show()
+
+    //#20. List the Enames those are having five characters in their Names.
+    println("20. List the Enames those are having five characters in their Names.")
+    emp.filter(length($"ENAME") === 5).show()
+    
   }
 }
