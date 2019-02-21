@@ -14,10 +14,10 @@ Files Details:
 
 Environments Required to Install:
 
-Java Version 8
+Java Version 8,
 Spark version 1.6+, 2.0+(Prefered)
 
-Jupyter Notebook for Pyspark
+Jupyter Notebook for Pyspark,
 IntellijIdea for Scala-Spark
 
 
