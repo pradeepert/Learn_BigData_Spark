@@ -113,7 +113,7 @@ object Spark_DF {
     emp.filter($"JOB" === "CLERK" || $"JOB" === "ANALYST").show()
     //----------------------------------------------------------------------------------------------------------
 
-    //Important - UDF
+    //Important - UDF 
     //If sal more than 1000 tell mgr else acc
 
     //Note: It will help to find the type

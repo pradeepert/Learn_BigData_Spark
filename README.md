@@ -12,4 +12,13 @@ Files Details:
 
 4) Spark Optimization: Some important Ideas for Spark Job optimization and tuning.
 
+Environments Required to Install:
+
+Java Version 8
+Spark version 1.6+, 2.0+(Prefered)
+
+Jupyter Notebook for Pyspark
+IntellijIdea for Scala-Spark
+
+
 
