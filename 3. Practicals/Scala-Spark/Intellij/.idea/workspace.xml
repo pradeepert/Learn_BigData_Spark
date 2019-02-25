@@ -2,7 +2,27 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fd04f0bf-0fe2-4c9a-bbdb-048a55bc88d8" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/modules/Intellij.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/Intellij.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/scala/Spark_DF.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/Spark_DF.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/resolution-cache/default/intellij$sources_2.11/0.1/resolved.xml.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/resolution-cache/default/intellij$sources_2.11/0.1/resolved.xml.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/resolution-cache/default/intellij$sources_2.11/0.1/resolved.xml.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/resolution-cache/default/intellij$sources_2.11/0.1/resolved.xml.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/resolution-cache/reports/default-intellij$sources_2.11-compile-internal.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/resolution-cache/reports/default-intellij$sources_2.11-compile-internal.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/resolution-cache/reports/default-intellij$sources_2.11-compile.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/resolution-cache/reports/default-intellij$sources_2.11-compile.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/resolution-cache/reports/default-intellij$sources_2.11-docs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/resolution-cache/reports/default-intellij$sources_2.11-docs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/resolution-cache/reports/default-intellij$sources_2.11-optional.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/resolution-cache/reports/default-intellij$sources_2.11-optional.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/resolution-cache/reports/default-intellij$sources_2.11-plugin.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/resolution-cache/reports/default-intellij$sources_2.11-plugin.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/resolution-cache/reports/default-intellij$sources_2.11-pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/resolution-cache/reports/default-intellij$sources_2.11-pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/resolution-cache/reports/default-intellij$sources_2.11-provided.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/resolution-cache/reports/default-intellij$sources_2.11-provided.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/resolution-cache/reports/default-intellij$sources_2.11-runtime-internal.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/resolution-cache/reports/default-intellij$sources_2.11-runtime-internal.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/resolution-cache/reports/default-intellij$sources_2.11-runtime.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/resolution-cache/reports/default-intellij$sources_2.11-runtime.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/resolution-cache/reports/default-intellij$sources_2.11-scala-tool.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/resolution-cache/reports/default-intellij$sources_2.11-scala-tool.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/resolution-cache/reports/default-intellij$sources_2.11-sources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/resolution-cache/reports/default-intellij$sources_2.11-sources.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/resolution-cache/reports/default-intellij$sources_2.11-test-internal.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/resolution-cache/reports/default-intellij$sources_2.11-test-internal.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/resolution-cache/reports/default-intellij$sources_2.11-test.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/resolution-cache/reports/default-intellij$sources_2.11-test.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.11/classes/Spark_DF$.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.11/classes/Spark_DF$.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/streams/$global/updateClassifiers/$global/streams/out" beforeDir="false" afterPath="$PROJECT_DIR$/target/streams/$global/updateClassifiers/$global/streams/out" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../4. Spark Optimization.docx" beforeDir="false" afterPath="$PROJECT_DIR$/../../../4. Spark Optimization.docx" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -33,7 +53,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/scala/Spark_RDD.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="454">
+            <state relative-caret-position="3615">
               <caret line="243" column="113" selection-start-line="243" selection-end-line="243" selection-end-column="113" />
               <folding>
                 <element signature="e#0#49#0" expanded="true" />
@@ -45,7 +65,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/scala/Spark_Actions.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
+            <state relative-caret-position="30">
               <caret line="4" selection-start-line="4" selection-end-line="4" />
               <folding>
                 <element signature="e#0#49#0" expanded="true" />
@@ -57,8 +77,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/scala/Spark_DF.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="251">
-              <caret line="161" column="4" selection-start-line="161" selection-start-column="4" selection-end-line="161" selection-end-column="4" />
+            <state relative-caret-position="117">
+              <caret line="274" column="4" selection-start-line="274" selection-start-column="4" selection-end-line="274" selection-end-column="4" />
               <folding>
                 <element signature="e#0#40#0" expanded="true" />
               </folding>
@@ -76,6 +96,9 @@
     </option>
   </component>
   <component name="FindInProjectRecents">
+    <findStrings>
+      <find>as</find>
+    </findStrings>
     <dirStrings>
       <dir>$PROJECT_DIR$/src</dir>
     </dirStrings>
@@ -105,6 +128,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -134,12 +159,10 @@
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1550744402859" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1550754838698" />
     <property name="settings.editor.selected.configurable" value="sbt.project.settings.configurable" />
   </component>
   <component name="RunDashboard">
@@ -233,7 +256,7 @@
     <frame x="67" y="25" width="1299" height="743" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.30806065" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.31364724" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -264,6 +287,18 @@
       <window_info anchor="right" id="sbt" order="8" />
     </layout>
   </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="scala-line">
+          <url>file://$PROJECT_DIR$/src/main/scala/Spark_DF.scala</url>
+          <line>255</line>
+          <properties />
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/build.sbt">
       <provider selected="true" editor-type-id="text-editor">
@@ -272,20 +307,20 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/Spark_Actions.scala">
+    <entry file="file://$PROJECT_DIR$/src/main/scala/Spark_RDD.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" selection-start-line="4" selection-end-line="4" />
+        <state relative-caret-position="3615">
+          <caret line="243" column="113" selection-start-line="243" selection-end-line="243" selection-end-column="113" />
           <folding>
             <element signature="e#0#49#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/Spark_RDD.scala">
+    <entry file="file://$PROJECT_DIR$/src/main/scala/Spark_Actions.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="454">
-          <caret line="243" column="113" selection-start-line="243" selection-end-line="243" selection-end-column="113" />
+        <state relative-caret-position="30">
+          <caret line="4" selection-start-line="4" selection-end-line="4" />
           <folding>
             <element signature="e#0#49#0" expanded="true" />
           </folding>
@@ -294,8 +329,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/scala/Spark_DF.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="251">
-          <caret line="161" column="4" selection-start-line="161" selection-start-column="4" selection-end-line="161" selection-end-column="4" />
+        <state relative-caret-position="117">
+          <caret line="274" column="4" selection-start-line="274" selection-start-column="4" selection-end-line="274" selection-end-column="4" />
           <folding>
             <element signature="e#0#40#0" expanded="true" />
           </folding>

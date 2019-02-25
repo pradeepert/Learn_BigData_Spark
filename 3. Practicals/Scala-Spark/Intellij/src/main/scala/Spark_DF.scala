@@ -146,19 +146,137 @@ object Spark_DF {
     //# 17. List the emps who are joined in the year 80.
     print("17. List the emps who are joined in the year 80.")
     emp.filter(year($"HIREDATE") === 1980).show()
+    //----------------------------------------------------------------------------------------------------------
 
     //# 18. List the emps who are joined in the month of Aug 1980.
     println("18. List the emps who are joined in the month of Aug 1980.")
     emp.filter(year($"HIREDATE") === 1980 && month($"HIREDATE") === 12).show()
+    //----------------------------------------------------------------------------------------------------------
 
     //IMPORTANT
     // #19. List the emps Who Annual sal ranging from 22000 and 45000.
     println("19. List the emps Who Annual sal ranging from 22000 and 45000.")
     emp.select($"*",($"SAL"*12).alias("AnnSal")).filter($"AnnSal".between(22000, 45000)).show()
+    //----------------------------------------------------------------------------------------------------------
 
     //#20. List the Enames those are having five characters in their Names.
     println("20. List the Enames those are having five characters in their Names.")
     emp.filter(length($"ENAME") === 5).show()
-    
+    //----------------------------------------------------------------------------------------------------------
+
+    //#21. List the Enames those are starting with ‘S’ and with five characters.
+    println("21. List the Enames those are starting with ‘S’ and with five characters")
+    emp.filter(substring($"ENAME", 0,1) === "S").show()
+    //----------------------------------------------------------------------------------------------------------
+
+    // #22. List the emps those are having four chars and third character must be ‘r’.
+    println("22. List the emps those are having four chars and third character must be ‘r’.")
+    emp.filter(length($"ENAME") === 4).filter(substring($"ENAME", 3,1) === "R").show()
+    //----------------------------------------------------------------------------------------------------------
+
+    //IMPORTANT
+    // # 29. List the emps who does not belong to Deptno 20.
+    println("29. List the emps who does not belong to Deptno 20.")
+    emp.filter(!($"DEPTNO" === 20)).show()
+    //----------------------------------------------------------------------------------------------------------
+
+    //# 30. List all the emps except ‘PRESIDENT’ & ‘MGR” in asc order of Salaries.
+    println("30. List all the emps except ‘PRESIDENT’ & ‘MGR” in asc order of Salaries.")
+    emp.filter(!($"JOB".isin("PRESIDENT","MGR"))).show()
+    //----------------------------------------------------------------------------------------------------------
+
+    //# 31. List all the emps who joined before or after 1981
+    println("31. List all the emps who joined before or after 1981")
+    emp.filter(!(year($"HIREDATE") === 1981)).show()
+    //----------------------------------------------------------------------------------------------------------
+
+    //IMPORTANT
+    //# 32. List the emps whose Empno not starting with digit 78.
+    println("32. List the emps whose Empno not starting with digit 78.")
+    emp.filter(!($"EMPNO".like("78%"))).show()
+    //----------------------------------------------------------------------------------------------------------
+
+    // # 34. List the emps who joined in any year but not belongs to the month of April.
+    println("34. List the emps who joined in any year but not belongs to the month of April.")
+    emp.filter(!(month($"HIREDATE") === 4)).show()
+    //----------------------------------------------------------------------------------------------------------
+
+    // # 35. List all the Clerks of Deptno 20
+    println("35. List all the Clerks of Deptno 20")
+    emp.filter($"DEPTNO" === 20 && $"JOB" === "CLERK").show()
+    //----------------------------------------------------------------------------------------------------------
+
+    // #38. Display the location of SMITH.
+    println("38. Display the location of SMITH.")
+    emp.join(broadcast(dept), "DEPTNO").filter($"ENAME" === "SMITH").select($"ENAME", $"DLOC").show()
+    //----------------------------------------------------------------------------------------------------------
+
+    // #39. List the total information of EMP table along with DNAME and Loc of all the emps Working Under ‘ACCOUNTING’ & ‘RESEARCH’ in the asc Deptno.
+    println("39. List the total information of EMP table along with DNAME and Loc of all the emps Working Under ‘ACCOUNTING’ & ‘RESEARCH’ in the asc Deptno.")
+    emp.join(broadcast(dept), "DEPTNO").filter($"DNAME".isin("ACCOUNTING", "RESEARCH")).show()
+    //----------------------------------------------------------------------------------------------------------
+
+    // #40 List the Empno, Ename, Sal, Dname of all the ‘MGRS’ and ‘ANALYST’ working in New York, Dallas with an exp more than 7 years without receiving the Comm asc order of Loc.
+    println("40 List the Empno, Ename, Sal, Dname of all the ‘MGRS’ and ‘ANALYST’ working in New York, Dallas with an exp more than 7 years without receiving the Comm asc order of Loc.")
+    emp.join(broadcast(dept), "DEPTNO").filter($"JOB".isin("MANAGER","ANALYST") && $"DLOC".isin("NEW YORK", "DALLAS") && year(current_date()) - year($"HIREDATE") > 7 && $"COMM" === 0.0).show()
+    //----------------------------------------------------------------------------------------------------------
+
+    // #153. Find out all the emps who earn highest salary in each job type. Sort in descending salary order.
+    println("153. Find out all the emps who earn highest salary in each job type. Sort in descending salary order.")
+    emp.groupBy("JOB").agg(max("SAL") as "MaxSal").sort($"MaxSal".desc).show()
+    //----------------------------------------------------------------------------------------------------------
+
+    //Important
+    //how to join two tables without primary key
+
+    emp.join(salgrd, $"SAL".between($"losal", $"hisal")).show()
+
+    //155 List the employee name,Salary and Deptno for each employee who earns a salary greater than the average for their department order by Deptno.
+    println("155 List the employee name,Salary and Deptno for each employee who earns a salary greater than the average for their department order by Deptno.")
+
+    val avgSal = emp.groupBy("DEPTNO").agg(avg("SAL") as "avgSal")
+    emp.as("e").join(avgSal.as("a"), $"e.DEPTNO" === $"a.DEPTNO" && $"e.SAL" > $"a.avgSal").show()
+    //----------------------------------------------------------------------------------------------------------
+
+    // 156) List the Deptno where there are no emps.
+    println("156) List the Deptno where there are no emps.")
+    emp.join(dept, emp("DEPTNO") === dept("DEPTNO"), "right").filter($"EMPNO"isNull).show()
+    //----------------------------------------------------------------------------------------------------------
+
+    // 157) List the No.of emp’s and Avg salary within each department for each job.
+    println("157. List the No.of emp’s and Avg salary within each department for each job.")
+    emp.groupBy("DEPTNO","JOB").agg(count("EMPNO"),avg("SAL")).show()
+    //----------------------------------------------------------------------------------------------------------
+
+    // 158) Find the maximum average salary drawn for each job except for ‘President’.
+    println("158) Find the maximum average salary drawn for each job except for ‘President’.")
+
+    emp.filter($"JOB" !== "PRESIDENT").groupBy("JOB").agg(max("SAL")).show()
+    emp.filter(!($"JOB".isin("PRESIDENT"))).groupBy("JOB").agg(max("SAL")).show()
+    //----------------------------------------------------------------------------------------------------------
+
+    // 159) Find the name and Job of the emps who earn Max salary and Commission.
+    println("159) Find the name and Job of the emps who earn Max salary and Commission.")
+    val maxSalry = emp.filter(!($"COMM" === 0)).agg(max($"SAL" + $"COMM"))
+    maxSalry.show()
+    //----------------------------------------------------------------------------------------------------------
+
+    // 160) List the Name, Job and Salary of the emps who are not belonging to the department 10 but who have the same job and Salary as the emps of dept 10.
+    println("160) List the Name, Job and Salary of the emps who are not belonging to the department 10 but who have the same job and Salary as the emps of dept 10.")
+    val no10 = emp.filter($"DEPTNO" !== 10)
+    val yes10 = emp.filter($"DEPTNO" === 10)
+
+    no10.join(yes10, no10("JOB") === yes10("JOB") && no10("SAL") === yes10("SAL")).show()
+    //----------------------------------------------------------------------------------------------------------
+
+    // 162) List the Deptno, Name, Job, Salary and Sal+Comm of the emps who earn the second highest earnings (sal + comm.).
+    println("162) List the Deptno, Name, Job, Salary and Sal+Comm of the emps who earn the second highest earnings (sal + comm.).")
+
+    val w = Window.orderBy(($"SAL" + $"COMM").desc)
+    val rank1 = emp.withColumn("rank", dense_rank().over(w))
+    rank1.filter($"rank" === 2).show()
+
+    emp.as("a").join(emp.as("b"), $"a.SAL" > $"b.SAL").select($"a.EMPNO", $"a.ENAME", $"a.JOB", $"a.MGR", $"a.SAL")
+
   }
 }

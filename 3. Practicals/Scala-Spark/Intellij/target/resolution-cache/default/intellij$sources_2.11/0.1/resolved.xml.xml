@@ -4,7 +4,7 @@
 		module="intellij$sources_2.11"
 		revision="0.1"
 		status="integration"
-		publication="20190220183136"
+		publication="20190225121833"
 	/>
 	<configurations>
 		<conf name="compile" visibility="public" description=""/>
@@ -81,14 +81,8 @@
 		<dependency org="com.google.guava" name="guava" rev="11.0.2" transitive="false" conf="compile->default(compile)">
 			<artifact name="guava" type="src" ext="jar" conf="sources" e:classifier="sources"/>
 		</dependency>
-		<dependency org="com.google.code.findbugs" name="jsr305" rev="1.3.9" transitive="false" conf="compile->default(compile);runtime->default(compile);test->default(compile);compile-internal->default(compile);runtime-internal->default(compile);test-internal->default(compile)">
-			<artifact name="jsr305" type="src" ext="jar" conf="sources" e:classifier="sources"/>
-		</dependency>
 		<dependency org="commons-cli" name="commons-cli" rev="1.2" transitive="false" conf="compile->default(compile);runtime->default(compile);test->default(compile);compile-internal->default(compile);runtime-internal->default(compile);test-internal->default(compile)">
 			<artifact name="commons-cli" type="src" ext="jar" conf="sources" e:classifier="sources"/>
-		</dependency>
-		<dependency org="xmlenc" name="xmlenc" rev="0.52" transitive="false" conf="compile->default(compile);runtime->default(compile);test->default(compile);compile-internal->default(compile);runtime-internal->default(compile);test-internal->default(compile)">
-			<artifact name="xmlenc" type="src" ext="jar" conf="sources" e:classifier="sources"/>
 		</dependency>
 		<dependency org="commons-httpclient" name="commons-httpclient" rev="3.1" transitive="false" conf="compile->default(compile);runtime->default(compile);test->default(compile);compile-internal->default(compile);runtime-internal->default(compile);test-internal->default(compile)">
 			<artifact name="commons-httpclient" type="src" ext="jar" conf="sources" e:classifier="sources"/>
@@ -113,9 +107,6 @@
 		</dependency>
 		<dependency org="commons-beanutils" name="commons-beanutils" rev="1.7.0" transitive="false" conf="compile->default(compile);runtime->default(compile);test->default(compile);compile-internal->default(compile);runtime-internal->default(compile);test-internal->default(compile)">
 			<artifact name="commons-beanutils" type="src" ext="jar" conf="sources" e:classifier="sources"/>
-		</dependency>
-		<dependency org="commons-beanutils" name="commons-beanutils-core" rev="1.8.0" transitive="false" conf="compile->default(compile);runtime->default(compile);test->default(compile);compile-internal->default(compile);runtime-internal->default(compile);test-internal->default(compile)">
-			<artifact name="commons-beanutils-core" type="src" ext="jar" conf="sources" e:classifier="sources"/>
 		</dependency>
 		<dependency org="com.google.protobuf" name="protobuf-java" rev="2.5.0" transitive="false" conf="compile->default(compile);runtime->default(compile);test->default(compile);compile-internal->default(compile);runtime-internal->default(compile);test-internal->default(compile)">
 			<artifact name="protobuf-java" type="src" ext="jar" conf="sources" e:classifier="sources"/>
@@ -161,9 +152,6 @@
 		</dependency>
 		<dependency org="org.mortbay.jetty" name="jetty-util" rev="6.1.26" transitive="false" conf="compile->default(compile);runtime->default(compile);test->default(compile);compile-internal->default(compile);runtime-internal->default(compile);test-internal->default(compile)">
 			<artifact name="jetty-util" type="src" ext="jar" conf="sources" e:classifier="sources"/>
-		</dependency>
-		<dependency org="xerces" name="xercesImpl" rev="2.9.1" transitive="false" conf="compile->default(compile);runtime->default(compile);test->default(compile);compile-internal->default(compile);runtime-internal->default(compile);test-internal->default(compile)">
-			<artifact name="xercesImpl" type="src" ext="jar" conf="sources" e:classifier="sources"/>
 		</dependency>
 		<dependency org="xml-apis" name="xml-apis" rev="1.3.04" transitive="false" conf="compile->default(compile);runtime->default(compile);test->default(compile);compile-internal->default(compile);runtime-internal->default(compile);test-internal->default(compile)">
 			<artifact name="xml-apis" type="src" ext="jar" conf="sources" e:classifier="sources"/>
@@ -278,9 +266,6 @@
 		</dependency>
 		<dependency org="javax.activation" name="activation" rev="1.1.1" transitive="false" conf="compile->default(compile);runtime->default(compile);test->default(compile);compile-internal->default(compile);runtime-internal->default(compile);test-internal->default(compile)">
 			<artifact name="activation" type="src" ext="jar" conf="sources" e:classifier="sources"/>
-		</dependency>
-		<dependency org="mx4j" name="mx4j" rev="3.0.2" transitive="false" conf="compile->default(compile);runtime->default(compile);test->default(compile);compile-internal->default(compile);runtime-internal->default(compile);test-internal->default(compile)">
-			<artifact name="mx4j" type="src" ext="jar" conf="sources" e:classifier="sources"/>
 		</dependency>
 		<dependency org="javax.mail" name="mail" rev="1.4.7" transitive="false" conf="compile->default(compile);runtime->default(compile);test->default(compile);compile-internal->default(compile);runtime-internal->default(compile);test-internal->default(compile)">
 			<artifact name="mail" type="src" ext="jar" conf="sources" e:classifier="sources"/>
