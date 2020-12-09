@@ -1,0 +1,5 @@
+Refresh Topics:
+
+1) File Formats in Hive(ORC, Parquet, AVRO,...)
+
+ORC - https://cwiki.apache.org/confluence/display/Hive/LanguageManual+ORC
