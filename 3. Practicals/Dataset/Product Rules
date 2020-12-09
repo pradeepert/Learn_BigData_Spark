@@ -1,4 +1,0 @@
-Product;rule;amount
-car loan;dti<0.5;salary*12*3
-personal loan;dti<0.7;salary*12*5
-home loan;dti<0.3;salary*12*10
